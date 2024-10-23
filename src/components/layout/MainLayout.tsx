@@ -4,12 +4,14 @@ import sizeConfigs from "../../configs/sizeConfigs"
 import Sidebar from "../common/Sidebar"
 import colorConfigs from "../../configs/colorConfigs"
 import { Outlet } from "react-router-dom"
-
-
+import { CiHeart } from "react-icons/ci";
 const MainLayout = () => {
+    const handleHeartClick = () => {
+        window.open("https://www.tahsinemre.com/", "_blank");
+    };
     return (
         <Box sx={{ display: "flex" }}>
-            <Topbar />
+            {/* <Topbar /> */}
             <Box
                 component="nav"
                 sx={{
@@ -32,6 +34,15 @@ const MainLayout = () => {
                 <Toolbar />
                 <Outlet />
             </Box>
+            <div style={{
+                position: "absolute",
+                bottom: "0",
+                right: "7px",
+                fontSize: "20px",
+                cursor: "pointer"
+            }}>
+                <CiHeart onClick={handleHeartClick} />
+            </div>
         </Box>
     )
 }

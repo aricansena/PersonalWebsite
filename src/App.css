@@ -1,0 +1,68 @@
+.flex-column-space-between {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialmedia-icon {
+    margin: 0 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.socialmedia-icon:hover {
+    transform: scale(1.2);
+}
+
+.custom-textfield .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #233044;
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.custom-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #233044;
+}
+
+.custom-textfield .MuiInputLabel-root {
+    color: #233044;
+}
+
+.custom-textfield .MuiInputLabel-root.Mui-focused {
+    color: #233044;
+}
+
+.custom-button {
+    background-color: #233044;
+    color: white;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-button:hover {
+    background-color: #1e2a39;
+    border-color: #233044;
+}
+
+.custom-button:focus {
+    outline: none;
+    border-color: #233044;
+}
+
+.MuiButton-root.custom-button {
+    background-color: #233044;
+}

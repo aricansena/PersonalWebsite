@@ -1,7 +1,6 @@
 import { AppBar, Toolbar, Typography } from "@mui/material"
 import sizeConfigs from "../../configs/sizeConfigs"
 import colorConfigs from "../../configs/colorConfigs"
-
 const Topbar = () => {
     return (
         <AppBar
@@ -14,9 +13,10 @@ const Topbar = () => {
                 color: colorConfigs.topbar.color
             }}
         >
-            <Toolbar>
+            <Toolbar
+            >
                 <Typography variant="h6">
-                    React Sidebar with dropdown
+                    toopbar
                 </Typography>
             </Toolbar>
         </AppBar>
