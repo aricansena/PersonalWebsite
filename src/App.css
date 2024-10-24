@@ -10,6 +10,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100%;
+}
+
+@media (max-width: 720px) {
+    .flex-row {
+        flex-direction: column;
+    }
 }
 
 .flex-column {

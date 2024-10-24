@@ -1,21 +1,23 @@
 import { Box, Toolbar } from "@mui/material"
 import Topbar from "../common/Topbar"
-import sizeConfigs from "../../configs/sizeConfigs"
 import Sidebar from "../common/Sidebar"
 import colorConfigs from "../../configs/colorConfigs"
 import { Outlet } from "react-router-dom"
 import { CiHeart } from "react-icons/ci";
+
+
 const MainLayout = () => {
     const handleHeartClick = () => {
         window.open("https://www.tahsinemre.com/", "_blank");
     };
+
     return (
         <Box sx={{ display: "flex" }}>
             {/* <Topbar /> */}
             <Box
                 component="nav"
                 sx={{
-                    width: sizeConfigs.sidebar.width,
+                    width: "ml-6",
                     flexShrink: 0
                 }}
             >
@@ -26,12 +28,12 @@ const MainLayout = () => {
                 sx={{
                     flexGrow: 1,
                     p: 3,
-                    width: `calc(100% - ${sizeConfigs.sidebar.width})`,
+                    width: "600px",
                     minHeight: "100vh",
                     backgroundColor: colorConfigs.mainBg
                 }}
             >
-                <Toolbar />
+                {/* <Toolbar /> */}
                 <Outlet />
             </Box>
             <div style={{

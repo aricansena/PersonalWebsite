@@ -1,0 +1,7 @@
+.flex-row-c {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
