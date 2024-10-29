@@ -51,6 +51,7 @@ const Sidebar = () => {
                 variant={isMobile ? "temporary" : "permanent"}
                 open={open}
                 onClose={toggleSidebar}
+
                 sx={{
                     display: "flex",
                     width: "300px",
@@ -90,7 +91,7 @@ const Sidebar = () => {
                         {
                             appRoutes.map((route, index) => (
                                 route.sidebarProps ? (
-                                    <SidebarItem item={route} key={index} />
+                                    <SidebarItem item={route} key={index} toggleSidebar={toggleSidebar} />
                                 ) : null
                             ))
                         }

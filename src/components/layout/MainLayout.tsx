@@ -30,7 +30,7 @@ const MainLayout = () => {
                     p: 3,
                     width: "600px",
                     minHeight: "100vh",
-                    backgroundColor: colorConfigs.mainBg
+                    backgroundColor: colorConfigs.mainBg,
                 }}
             >
                 {/* <Toolbar /> */}

@@ -1,7 +1,51 @@
-.flex-row-c {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
+ .flex-row-c,
+ .flex-row-d {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ .main-div {
+     display: flex;
+     flex-direction: row;
+     height: 90vh;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .contact-icon {
+     margin: 0 8px;
+     cursor: pointer;
+     transition: transform 0.3s;
+ }
+
+ .contact-icon:hover {
+     transform: scale(1.2);
+ }
+
+ .contact {
+     display: flex;
+     flex-direction: row;
+     margin-top: 50px;
+ }
+
+ @media (max-width: 1125px) {
+     .contact {
+         flex-direction: column;
+     }
+ }
+
+ .flex-row-d {
+     display: flex;
+     flex-direction: row;
+     gap: 10px;
+
+ }
+
+ @media (max-width: 720px) {
+     .flex-row-d {
+         flex-direction: column;
+     }
+ }

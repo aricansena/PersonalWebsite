@@ -1,20 +1,22 @@
 import { ListItemButton, ListItemIcon } from '@mui/material';
-import { RouteType } from '../../routes/config'
+import { RouteType } from '../../routes/config';
 import { Link } from 'react-router-dom';
 import colorConfigs from '../../configs/colorConfigs';
 
 type Props = {
-    item: RouteType
+    item: RouteType,
+    toggleSidebar: () => void
 };
 
-const SidebarItem = ({ item }: Props) => {
+const SidebarItem = ({ item, toggleSidebar }: Props) => {
     return (
         item.sidebarProps && item.path ? (
             <ListItemButton
                 component={Link}
                 to={item.path}
+                onClick={toggleSidebar}
                 sx={{
-                    "&: hover": {
+                    "&:hover": {
                         backgroundColor: colorConfigs.sidebar.hoverBg
                     },
                     paddingY: "12px",
@@ -32,4 +34,4 @@ const SidebarItem = ({ item }: Props) => {
     );
 };
 
-export default SidebarItem
+export default SidebarItem;
