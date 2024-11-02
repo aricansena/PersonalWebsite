@@ -1,10 +1,9 @@
-import { Box, Toolbar } from "@mui/material"
-import Topbar from "../common/Topbar"
-import Sidebar from "../common/Sidebar"
-import colorConfigs from "../../configs/colorConfigs"
-import { Outlet } from "react-router-dom"
+import { Box } from "@mui/material";
+import Topbar from "../common/Topbar";
+import Sidebar from "../common/Sidebar";
+import colorConfigs from "../../configs/colorConfigs";
+import { Outlet } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
-
 
 const MainLayout = () => {
     const handleHeartClick = () => {
@@ -12,13 +11,19 @@ const MainLayout = () => {
     };
 
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box
+            sx={{
+                display: "flex",
+                minHeight: "100vh",
+                background: "linear-gradient(to left, #1e2a39, #fff)",
+            }}
+        >
             {/* <Topbar /> */}
             <Box
                 component="nav"
                 sx={{
                     width: "ml-6",
-                    flexShrink: 0
+                    flexShrink: 0,
                 }}
             >
                 <Sidebar />
@@ -29,8 +34,6 @@ const MainLayout = () => {
                     flexGrow: 1,
                     p: 3,
                     width: "600px",
-                    minHeight: "100vh",
-                    backgroundColor: colorConfigs.mainBg,
                 }}
             >
                 {/* <Toolbar /> */}
@@ -41,12 +44,13 @@ const MainLayout = () => {
                 bottom: "0",
                 right: "7px",
                 fontSize: "20px",
-                cursor: "pointer"
+                cursor: "pointer",
+                color: 'white'
             }}>
                 <CiHeart onClick={handleHeartClick} />
             </div>
         </Box>
-    )
+    );
 }
 
-export default MainLayout
+export default MainLayout;
